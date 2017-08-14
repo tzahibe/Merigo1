@@ -111,6 +111,7 @@
     <Content Include="Content\images\suncar1_61163_0.png" />
     <Content Include="Content\images\suncar2_61163_Cover200X200.png" />
     <Content Include="Content\images\tza.png" />
+    <Content Include="Content\images\Screenshot_1.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
