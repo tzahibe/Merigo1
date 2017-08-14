@@ -1,0 +1,213 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<md-toolbar layout="row" layout-align="center">
+        <h1>Merigo</h1>
+    </md-toolbar>
+        <div class="container" layout="row" flex>
+        <md-content id="content" flex>
+            content
+        </md-content>
+    </div>
+
+*@
+
+
+
+<div class="col-xs-12 container-fluid"  ng-controller="FormCtrl">
+    <!-- header-->
+    <header class="header">
+        <h1>Merigo</h1>
+        <img class="img-logo" src="~/Content/icons/Untitled-2.png" />
+        <p>
+            מריגו - בית תוכנה לבניית מערכות אינטרנטיות
+        </p>
+    </header>
+
+    <!-- השירותים שלנו-->
+    <div class="sub-box col-xs-12 col-sm-6">
+        <div class="title green">
+            <h3>השירותים שלנו</h3>
+        </div>
+        <div class="tab-content">
+            <div class="option">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                פיתוח תוכנה ( Ionic, Hybrid Apps, Server/ Client side, front-end, angularJS,angular2, .NET, SQL, פיתוח mobile, פיתוח web)
+            </div>
+            <div class="option">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                גרפיקה ועיצוב – Art Studio (מעצבים גרפיים, 3D ו-2D אנימטורים, מאיירים ועוד)
+            </div>
+            @*<div class="option">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    מפתחי BI ודוחות – (מגוון פלטפורמות וכלים)
+                </div>*@
+            <div class="option">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                שירותים מקצועיים – (תמיכה טכנית, התקנה והטמעה אצל לקוחות ברחבי העולם)
+            </div>
+            <div class="option">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                בדיקות תוכנה ו-QA (בדיקות פונקציונאליות למערכות מורכבות, מובייל, Web וכן חבילות עבודה קטנות וקצרות בשירות מנוהל – TaaS)
+            </div>
+            <div class="option">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                מערכות לניהול תוכן - UMBRACO, ומערכות מותאמות לקוח על פי דרישה
+            </div>
+        </div>
+    </div>
+
+    <!-- הצעת מחיר-->
+    <div class="sub-box purple container col-xs-12 col-sm-6">
+        <div class="">
+            <div class="title green">
+                <h3>קבל הצעת מחיר עוד היום!</h3>
+            </div>
+            <div class="tab-content">
+                <div ng-hide="formSubmitted">
+                    <h3>לקבלת הצעת מחיר מלא את פרטיך</h3>
+                    <form name="contactForm" ng-submit="contactForm.$valid && submit()" novalidate>
+                        <div class="form-group">
+                            <label>שם מלא</label>
+                            <input required ng-model="user.FullName" type="text" placeholder="שם מלא" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>טלפון</label>
+                            <input required ng-model="user.Phone" type="text" placeholder="טלפון" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>דואר אלקטרוני</label>
+                            <input required 
+                                   ng-model="user.EMail" type="text" placeholder="דואר אלקטרוני" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="שלח" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+                <div ng-show="formSubmitted">
+                    <h3 class="col-xs-10 succ-msg">פרטיך נשלחו בהצלחה ! נחזור אליך בהקדם.</h3>
+                    <i class="fa fa-4x fa-check" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- מי אנחנו-->
+    <div class="sub-box col-xs-12">
+        <div class="title green">
+            <h3>מי אנחנו ?</h3>
+        </div>
+        <div class="option">
+            מידע על החברה בלה בלה בלה
+        </div>
+        <div class="tab-content">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5 class="avatar-title">צחי בן חמו</h5>
+                                <p class="subtitle">מפתח בכיר</p>
+                                <div class="avatar"><img src="~/Content/images/tza.png" alt="" class="img-responsive img-circle"></div>
+                                <p>
+                                    בלה בלה בלה
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5 class="avatar-title">ירון ברהמי</h5>
+                                <p class="subtitle">מפתח בכיר</p>
+                                <div class="avatar"><img src="~/Content/images/photo_64291.jpg" alt="" class="img-responsive img-circle"></div>
+                                <p>
+                                    בלה בלה בלה
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---עבודות שלנו תיק-->
+    <div class="sub-box col-xs-12">
+        <div class="title green">
+            <h3>תיק עבודות</h3>
+            <div class="col-xs-12 carusel">
+                <ul rn-carousel rn-carousel-index="carouselIndex3" rn-carousel-transition="hexagon" rn-carousel-buffered class="carousel3">
+                    <li ng-repeat="slide in slides3">
+                        <div ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage">
+                            <div class="work-tite">
+                                {{ slide.text }}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            @*<div class="visible-sm visible-lg visible-md" >
+                <div class="work col-sm-3">
+                    <div class="work-tite">
+                        אתר נחיתה למד"א
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/mda1_61167_Cover200X200.png" />
+                </div>
+                <div class="work col-sm-3">
+                    <div class="work-tite">
+                        אתר מדרשת
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/midreshet1_61165_Cover200X200.png" />
+                </div>
+                <div class="work col-sm-3">
+                    <div class="work-tite">
+                        אתר נטבוק
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/netbook1_61166_Cover200X200.png" />
+                </div>
+                <div class="work col-xs-12 col-sm-3">
+                    <div class="work-tite">
+                        אתר סטודנטים לאונ' הפתוחה
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/openu1_61164_Cover200X200.png" />
+                </div>
+            </div>
+          
+            <div class="hidden-sm hidden-lg hidden-md">
+                <div class="work col-xs-12">
+                    <div class="work-tite">
+                        אתר נחיתה למד"א
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/leket2_61161_0.png" />
+                </div>
+                <div class="work col-xs-12">
+                    <div class="work-tite">
+                        אתר מדרשת
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/mda2_61167_0.png" />
+                </div>
+                <div class="work col-xs-12">
+                    <div class="work-tite">
+                        אתר נטבוק
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/midreshet2_61165_0.png" />
+                </div>
+                <div class="work col-xs-12">
+                      <div class="work-tite">
+                        אתר סטודנטים לאונ' הפתוחה
+                    </div>
+                    <img class="img-responsive" src="~/Content/images/netbook2_61166_0.png" />
+                </div>
+            </div>*@
+
+           
+        </div>
+    </div>
+</div>
