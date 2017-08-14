@@ -99,7 +99,8 @@ input.btn.btn-success {
         background: #6d0958;
     }
 .col-xs-6.col-sm-3.col-md-3{
-    float:right;
+    /*float:right;*/
+    display:inline-block;
 }
 .boxed-grey {
     /*background: #48043a;*/
